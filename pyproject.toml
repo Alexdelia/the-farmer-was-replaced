@@ -30,6 +30,10 @@ ignore = [
 	"D212", # multi-line-summary-first-line
 
 	# format
+	## incompatible with tabs
+	"W191",
+	"D206",
+
 	"COM812", # missing-trailing-comma  # still keep other COM
 	"ISC001", # single-line-implicit-string-concatenation
 ]
