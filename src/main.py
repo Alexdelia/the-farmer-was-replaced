@@ -1,5 +1,5 @@
 clear()
-change_hat(Hats.Carrot_Hat)
+change_hat(Hats.Sunflower_Hat)
 
 import env
 from smart_move import smart_move
