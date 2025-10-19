@@ -1,0 +1,39 @@
+[project]
+name = "the-farmer-was-replaced"
+version = "0.0.1"
+description = "code I use for the game the farmer was replaced https://store.steampowered.com/app/2060160/The_Farmer_Was_Replaced/"
+requires-python = ">=3.12"
+authors = [
+	{ name = "Alexandre Delille", email = "alexandre.delille.57@gmail.com" },
+]
+
+[dependency-groups]
+dev = [
+	"ruff>=0.14.0",
+]
+
+[tool.ruff]
+cache-dir = ".cache/ruff"
+target-version = "py312"
+
+[tool.ruff.format]
+indent-style = "tab"
+docstring-code-format = true
+
+[tool.ruff.lint]
+explicit-preview-rules = true
+select = ["ALL"]
+ignore = [
+	# docstring
+	"D1",   # missing-docstring
+	"D203", # one-blank-line-before-class
+	"D212", # multi-line-summary-first-line
+
+	# format
+	"COM812", # missing-trailing-comma  # still keep other COM
+	"ISC001", # single-line-implicit-string-concatenation
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
