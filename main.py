@@ -6,7 +6,7 @@ from smart_move import smart_move
 while True:
 	if can_harvest():
 		harvest()
-	
+
 	if get_pos_y() % 3 == 0:
 		if get_ground_type() == Grounds.Grassland:
 			till()
