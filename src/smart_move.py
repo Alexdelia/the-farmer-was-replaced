@@ -1,29 +1,32 @@
-def smart_move():
-	size = get_world_size()
-	x = get_pos_x()
-	y = get_pos_y()
+from env import go
+
+
+def smart_move(e):
+	size = e["size"]
+	x = e["x"]
+	y = e["y"]
 
 	# bottom row
 	if y == 0 and x != 0:
-		move(West)
+		go(e, West)
 		return
 
 	# second bottom row
 	if y == 1 and x % 2 == 1 and x != size - 1:
-		move(East)
+		go(e, East)
 		return
 
 	# left col
 	if y == 0 and x != size - 1:
-		move(North)
+		go(e, North)
 		return
 
 	# top row
 	if y == size - 1 and x % 2 == 0:
-		move(East)
+		go(e, East)
 		return
 
 	if x % 2 == 0:
-		move(North)
+		go(e, North)
 	else:
-		move(South)
+		go(e, South)
