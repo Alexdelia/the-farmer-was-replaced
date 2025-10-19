@@ -3,6 +3,7 @@ plant_order = [
 	Entities.Tree,
 	Entities.Carrot,
 	Entities.Carrot,
+	Entities.Sunflower,
 ]
 plant_order_len = len(plant_order)
 

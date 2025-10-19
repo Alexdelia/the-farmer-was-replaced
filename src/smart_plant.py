@@ -24,7 +24,7 @@ def smart_plant(e):
 	if not p:
 		return
 
-	if p == Entities.Carrot:
+	if p == Entities.Carrot or p == Entities.Sunflower:
 		smart_tile()
 
 	plant(p)
